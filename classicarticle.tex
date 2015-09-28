@@ -1,0 +1,81 @@
+% --------------------------- License --------------------------------
+% ClassicArticle - A LaTeX article template based on classicthesis.
+%
+% Copyright (c) 2015 Sander Verdonschot
+%
+% License:
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; see the file COPYING.  If not, write to
+% the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+% Boston, MA 02111-1307, USA.
+%
+% --------------------------- Packages -------------------------------
+\documentclass[11pt,letterpaper]{article} % KOMA-Script article scrartcl
+\usepackage[T1]{fontenc}
+\usepackage[ascii]{inputenc}
+\usepackage[full]{textcomp}
+\usepackage[canadian]{babel}
+\usepackage[colorlinks=true,urlcolor=webbrown,linkcolor=RoyalBlue,citecolor=webgreen,pdfhighlight=/O]{hyperref}
+\usepackage{graphicx,subcaption,wrapfig,xspace}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage[nochapters,pdfspacing,subfig,eulermath]{classicthesis}
+
+% ----------------- Package options and useful commands --------------
+\graphicspath{{figures/}}
+
+\newtheoremstyle{caps} % Replaces standard bold theorem names by small caps
+  {\topsep}   % ABOVESPACE
+  {\topsep}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {}          % HEADFONT
+  {.}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {\spacedlowsmallcaps{\thmname{#1}\thmnumber{ #2}}\thmnote{ (#3)}} % CUSTOM-HEAD-SPEC
+
+\theoremstyle{caps}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{observation}[definition]{Observation}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{problem}{Open Problem}
+
+\newcommand{\etal}{et~al.\xspace}
+\newcommand{\case}[1]{\paragraph{Case {\upshape #1}.}}
+
+% ----------------------- Title and authors --------------------------
+\title{\rmfamily\normalfont\spacedallcaps{the title}}
+\author{\spacedlowsmallcaps{author}}
+\date{} % no date
+
+% --------------------------- Document -------------------------------
+\begin{document}
+\pagestyle{plain}
+\maketitle
+
+\begin{abstract}
+ The abstract.
+\end{abstract}
+    
+\section{First Section}
+
+Text of the first section.
+    
+% ------------------------- Bibliography -----------------------------
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
