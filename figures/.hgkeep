@@ -1,0 +1,1 @@
+Mercurial doesn't like empty folders, so this file just makes sure that it commits this folder.
