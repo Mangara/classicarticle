@@ -1,7 +1,0 @@
-syntax: glob
-*.aux
-*.log
-*.out
-*.synctex.gz
-*.toc
-*.pdf
